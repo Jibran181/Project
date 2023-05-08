@@ -1,0 +1,43 @@
+[
+  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "string", "name": "message", "type": "string" },
+          { "internalType": "address", "name": "reciever", "type": "address" },
+          { "internalType": "address", "name": "signer", "type": "address" },
+          { "internalType": "bytes", "name": "signature", "type": "bytes" }
+        ],
+        "internalType": "struct SigValidation.Details",
+        "name": "details",
+        "type": "tuple"
+      }
+    ],
+    "name": "getYourMessage",
+    "outputs": [
+      { "internalType": "string", "name": "recoverMessage", "type": "string" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "string", "name": "message", "type": "string" },
+          { "internalType": "address", "name": "reciever", "type": "address" },
+          { "internalType": "address", "name": "signer", "type": "address" },
+          { "internalType": "bytes", "name": "signature", "type": "bytes" }
+        ],
+        "internalType": "struct SigValidation.Details",
+        "name": "details",
+        "type": "tuple"
+      }
+    ],
+    "name": "recover",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

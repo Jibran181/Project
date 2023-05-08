@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <style>
+      .roadslider .slick-track {
+        min-height: 423px;
+      }
+      .milestone {
+        margin-bottom: -25px !important;
+        /* margin-left: -30px; */
+      }
+      .milestone:first-of-type {
+        /* margin-left: 0 !important; */
+      }
+      .milestone.space {
+        margin-top: 197px !important;
+      }
+      .milestone.space img {
+        object-position: top !important;
+      }
+
+      .roadslider .slick-arrow {
+        width: 47px;
+        height: 47px;
+        position: absolute;
+        top: 191px;
+        right: 100%;
+      }
+      .slick-arrow {
+        z-index: 1;
+        border-radius: 100px;
+        background-color: #171511;
+        cursor: pointer;
+      }
+      .roadslider .slick-arrow.right {
+        left: 100%;
+        right: auto;
+      }
+      @media screen and (min-width: 1550px) {
+        .milestone {
+          /* margin-right: -60px; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <app-root></app-root>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".roadslider").slick({
+          arrows: true,
+          slidesToShow: 3,
+          infinite: false,
+          slidesToScroll: 2,
+          prevArrow: "<img class='left' src='./assets/imgs/arrowleft.png' />",
+          nextArrow: "<img class='right' src='./assets/imgs/arrowright.png' />",
+          responsive: [
+            {
+              breakpoint: 850,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 1330,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
+        });
+        $(".uniqueslider").slick({
+          arrows: true,
+          slidesToShow: 2,
+          infinite: true,
+          slidesToScroll: 1,
+          appendArrows: $(".uniquearrows"),
+          prevArrow:
+            "<img class='mx-4 left' src='./assets/imgs/arrowleft.png' />",
+          nextArrow:
+            "<img class='mx-4 right' src='./assets/imgs/arrowright.png' />",
+          responsive: [
+            {
+              breakpoint: 640,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

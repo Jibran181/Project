@@ -1,0 +1,7 @@
+export const enviroment = {
+  SIGNING_DOMAIN_NAME: 'Voucher-Domain',
+  SIGNING_DOMAIN_VERSION: '1',
+  CONTRACT_ADDRESS: '0x5F09cBD5d4C3A9B5212766E4a894959b8144aaad',
+  CHAIN_ID: 5,
+  ETH_NETWORK: '0x5',
+};
